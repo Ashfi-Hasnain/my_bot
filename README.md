@@ -12,3 +12,5 @@ Works cited:
 2. https://www.youtube.com/watch?v=OWeLUSzxMsw&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT&index=1 (Video 1 of 23)
 3. https://www.youtube.com/watch?v=OWeLUSzxMsw&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT&index=2 (Video 2 of 23)
 4. https://github.com/joshnewans/articubot_one/blob/d5aa5e9bc9039073c0d8fd7fe426e170be79c087/description/inertial_macros.xacro
+5. https://www.youtube.com/watch?v=IjFcr5r0nMs&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT&index=3 (Video 3 of 23)
+6. https://github.com/joshnewans/articubot_one/blob/adb08202d3dafeeaf8a3691ddd64aa8551c40f78/launch/launch_sim.launch.py
