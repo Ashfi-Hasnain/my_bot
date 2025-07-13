@@ -7,4 +7,9 @@
     <!-- Defines the file for the robot's body [Source 5]-->
     <xacro:include filename="gazebo_control.xacro"/>
 
+    <!-- Defines the file for the robot's body [Source 11]-->
+    <xacro:include filename="lidar.xacro"/>
+
+    <!-- Defines the file for the robot's body [Source 14]-->
+    <xacro:include filename="camera.xacro"/>
 </robot>
