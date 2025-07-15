@@ -1,15 +1,34 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
 
-    <!-- Defines the file for the robot's body [Source 3]-->
+    <!-- 1. Defines the file for the robot's body [Source 3]-->
     <xacro:include filename="robot_core.xacro"/>
 
-    <!-- Defines the file for the robot's body [Source 5]-->
-    <xacro:include filename="gazebo_control.xacro"/>
+    
+    <!-- 2. Defines the file for the robot's control (Note - ONLY ONE CAN BE ACTIVE AT A TIME)-->
+    
+    <!-- 2A. A boolean to determine which controls to use [Source 19]-->
+    <xacro:arg name="use_ros2_control" default="true"/>
 
-    <!-- Defines the file for the robot's body [Source 11]-->
+    <!-- 2B. Defines the file for the robot's real-life control using ROS2 [Source 17]-->
+    <xacro:if value="$(arg use_ros2_control)">
+        <xacro:include filename="ros2_control.xacro"/>
+    </xacro:if>
+    <!-- 2C. Defines the file for the robot's simulation control usig Gazebo [Source 5]-->
+    <xacro:unless value="$(arg use_ros2_control)">
+        <xacro:include filename="gazebo_control.xacro"/>
+    </xacro:unless>
+
+    <!-- 3. Defines the file for the robot's lidar [Source 11]-->
     <xacro:include filename="lidar.xacro"/>
 
-    <!-- Defines the file for the robot's body [Source 14]-->
+
+    <!-- 4. Defines the file for the robot's cameras (Note - ONLY ONE CAN BE ACTIVE AT A TIME)-->
+    
+    <!-- 4A. Defines the file for the robot's camera [Source 14]-->
     <xacro:include filename="camera.xacro"/>
+    <!-- 4B. Defines the file for the robot's depth camere [Source 15]-->
+    <!-- <xacro:include filename="depth_camera.xacro"/> -->
+
+
 </robot>

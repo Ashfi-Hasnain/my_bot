@@ -22,3 +22,8 @@ Works cited:
 12. https://github.com/joshnewans/articubot_one/blob/545acac87ae215d80ef6b28abe6097eb7281d9ff/description/lidar.xacro
 13. https://github.com/joshnewans/articubot_one/blob/545acac87ae215d80ef6b28abe6097eb7281d9ff/launch/rplidar.launch.py 
 14. https://www.youtube.com/watch?v=A3nw2M47K50&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT&index=9 (Video 9 of 23)
+15. https://www.youtube.com/watch?v=T9xZ22i9-Ys&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT&index=10 (Video 10 of 23)
+16. https://www.youtube.com/watch?v=RjhBRn6lDSM&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT&index=11 (Video 11 of 23)
+17. https://www.youtube.com/watch?v=4QKsDf1c4hc&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT&index=12 (Video 12 of 23)
+18. https://www.youtube.com/watch?v=8ByoP_oSdno&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT&index=13 (Video 13 of 23)
+19. https://github.com/joshnewans/articubot_one/blob/bf28006638f36d290c991ffec433e6c326120d41/description/robot_core.xacro

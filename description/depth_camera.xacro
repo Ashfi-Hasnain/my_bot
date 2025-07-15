@@ -37,11 +37,11 @@
 
     <link name="camera_link_optical"> </link>
 
-    <!-- 2. Gazebo reference for camera_link [Source 12]-->
+    <!-- 2. Gazebo reference for camera_link [Source 15]-->
     <gazebo reference="camera_link">
         <material>Gazebo/Red</material>
 
-        <sensor name="camera" type="camera">
+        <sensor name="camera" type="depth">
             <pose> 0 0 0 0 0 0 </pose>
             <visualize>true</visualize>
             <update_rate>10</update_rate>
@@ -50,7 +50,7 @@
                 <image>
                     <width>640</width>
                     <height>480</height>
-                    <format>R8G8B8</format>
+                    <format>B8G8R8</format>
                 </image>
                 <clip>
                     <near>0.05</near>
@@ -59,6 +59,8 @@
             </camera>
             <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
                 <frame_name>camera_link_optical</frame_name>
+                <min depth>0.1</min_depth>
+                <max depth>100</max_depth>
             </plugin>
         </sensor>
     </gazebo>
