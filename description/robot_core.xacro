@@ -41,13 +41,25 @@
         <color rgba="0 0 0 1"/>
     </material>
 
-    <!-- 4. Defines all the relevant links of the body [Source 3 and 19]-->
+    <!-- 4. Introduces the base link and base footprint link-->
 
-    <!-- 4A. This is the base link, located at the centre of the body. All points will be based of this-->
+    <!-- 4A. This is the base link, located at the centre of the body. All points will be based of this [Source 3]-->
     <link name="base_link">
     </link>
 
-    <!-- 4B. This is the chassis, a box with a size of 30cm x 30cm x 15cm, located at the origin of the base link with an x-offset of 15cm and z-offset of 7.5cm-->
+    <!-- 4B. This is the base footprint link [Source 23]-->
+    <joint name="base_footprint_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+    
+    <link name="base_footprint">
+    </link>
+
+    <!-- 5. Defines all the relevant links of the body [Source 3 and 19]-->
+
+    <!-- 5A. This is the chassis, a box with a size of 30cm x 30cm x 15cm, located at the origin of the base link with an x-offset of 15cm and z-offset of 7.5cm-->
     <joint name="chassis_joint" type="fixed">
         <parent link="base_link"/>
         <child link="chassis"/>
@@ -77,7 +89,7 @@
         <material>Gazebo/White</material>
     </gazebo>
 
-    <!-- 3C. This is the left wheel, a cylinder with a radius of 5cm and length of 4cm, with an y-offset of 175mm and rotated 270 degrees around the x-axis-->
+    <!-- 5B. This is the left wheel, a cylinder with a radius of 5cm and length of 4cm, with an y-offset of 175mm and rotated 270 degrees around the x-axis-->
     <joint name="left_wheel_joint" type="continous">
         <parent link="base_link"/>
         <child link="left_wheel"/>
@@ -106,7 +118,7 @@
         <material>Gazebo/Black</material>
     </gazebo>
 
-    <!-- 3D. This is the right wheel, a cylinder with a radius of 5cm and length of 4cm, with an y-offset of 175mm and rotated 90 degrees around the x-axis-->
+    <!-- 5C. This is the right wheel, a cylinder with a radius of 5cm and length of 4cm, with an y-offset of 175mm and rotated 90 degrees around the x-axis-->
     <joint name="right_wheel_joint" type="continous">
         <parent link="base_link"/>
         <child link="right_wheel"/>
@@ -135,7 +147,7 @@
         <material>Gazebo/Black</material>
     </gazebo>
 
-    <!-- 3E. This is the caster wheel, a sphere with a radius of 5cm, located at an x-offset of 24cm from the chassis-->
+    <!-- 5D. This is the caster wheel, a sphere with a radius of 5cm, located at an x-offset of 24cm from the chassis-->
     <joint name="caster_wheel_joint" type="fixed">
         <parent link="chassis"/>
         <child link="caster_wheel"/>
