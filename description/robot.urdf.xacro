@@ -4,11 +4,13 @@
     <!-- 1. Defines the file for the robot's body [Source 3]-->
     <xacro:include filename="robot_core.xacro"/>
 
-    
     <!-- 2. Defines the file for the robot's control (Note - ONLY ONE CAN BE ACTIVE AT A TIME)-->
     
     <!-- 2A. A boolean to determine which controls to use [Source 19]-->
     <xacro:arg name="use_ros2_control" default="true"/>
+
+    <!-- Boolean to toggle simulation mode and real world mode [Source 20]-->
+    <xacro:arg name="sim_mode" default="false"/>
 
     <!-- 2B. Defines the file for the robot's real-life control using ROS2 [Source 17]-->
     <xacro:if value="$(arg use_ros2_control)">

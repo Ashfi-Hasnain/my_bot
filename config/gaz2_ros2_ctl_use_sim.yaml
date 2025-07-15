@@ -1,0 +1,4 @@
+# This file defines the controllers for the robot (Source 20)
+controller_manager:
+  ros__parameters:
+    use_sim_time: true

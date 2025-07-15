@@ -1,5 +1,7 @@
-<!--This code has been obtained from source 5-->
 <?xml version="1.0"?>
+
+<!--This code has been obtained from source 5-->
+
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
     <!-- 1. Introduces the gazebo (simulation) controls-->
