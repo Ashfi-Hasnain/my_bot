@@ -13,11 +13,11 @@
     <xacro:arg name="sim_mode" default="false"/>
 
     <!-- 2B. Defines the file for the robot's real-life control using ROS2 [Source 17]-->
-    <xacro:if value="$(arg use_ros2_control)">
+    <xacro:if value="${use_ros2_control}">
         <xacro:include filename="ros2_control.xacro"/>
     </xacro:if>
     <!-- 2C. Defines the file for the robot's simulation control usig Gazebo [Source 5]-->
-    <xacro:unless value="$(arg use_ros2_control)">
+    <xacro:unless value="${use_ros2_control}">
         <xacro:include filename="gazebo_control.xacro"/>
     </xacro:unless>
 
