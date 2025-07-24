@@ -19,9 +19,10 @@ def generate_launch_description():
 
     # Use Command substitution to run xacro and get the robot description
     robot_description_config = Command([
-        'xacro ', xacro_file,
-        ' use_ros2_control:=', use_ros2_control,
-        ' sim_mode:=', use_sim_time
+        'xacro', 
+        xacro_file,
+        'use_ros2_control:=', use_ros2_control,
+        'sim_mode:=', use_sim_time
     ])
 
     # Set parameters for robot_state_publisher
