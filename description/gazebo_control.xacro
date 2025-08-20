@@ -6,7 +6,7 @@
 
     <!-- 1. Introduces the gazebo (simulation) controls-->
     <gazebo>
-        <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+        <plugin name='diff_drive' filename='libgazebo_ros_diff_drive.so'>
             
             <!-- 1A. Wheel Details -->
             <left_joint>left_wheel_joint</left_joint>
@@ -16,7 +16,7 @@
 
             <!-- 1B. The maximum limits-->
             <max_wheel_torque>200</max_wheel_torque>
-            <max_wheel_acceleration>10</max_wheel_acceleration>
+            <max_wheel_acceleration>10.0</max_wheel_acceleration>
 
             <!-- 1C. Output details-->
             <odometry_frame>odom</odometry_frame>

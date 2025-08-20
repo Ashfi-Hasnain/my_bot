@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="robot">
 
     <!-- 1. Creates a joint between lidar and robot body [Source 14]-->
 
@@ -7,17 +7,17 @@
     <joint name="camera_joint" type="fixed">
         <parent link="chassis"/>
         <child link="camera_link"/>
-        <origin xyz="0.305 0 0.08" rpy="0 0.18 0"/>
+        <origin xyz="0.36 0 0.12" rpy="0 0 0"/>
     </joint>
 
     <link name="camera_link">
         <visual>
             <geometry>
-                <box size="0.01 .03 .03"/>
+                <box size="0.01 0.03 0.03"/>
             </geometry>
             <material name="red"/>
         </visual>
-        <collision>
+        <!--<collision>
             <origin xyz="0.305 0 0.08" rpy="0 0 0"/>
             <geometry>
                 <box size="0.01 0.3 0.3"/>
@@ -25,11 +25,11 @@
         </collision>
         <xacro:inertial_box mass="0.5" x="0.01" y="0.3" z="0.3"/>
             <origin xyz="0.305 0 0.08" rpy="0 0 0"/>
-        </xacro:inertial_box>
+        </xacro:inertial_box>-->
     </link>
 
     <!-- 1B. The camera optics (an alias to process the different axis than of ROS2)-->
-    <joint name="camera_joint" type="fixed">
+    <joint name="camera_optical_joint" type="fixed">
         <parent link="camera_link"/>
         <child link="camera_link_optical"/>
         <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
